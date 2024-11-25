@@ -1,0 +1,11 @@
+table {
+  font-size: 10px; /* 设置表格的字体大小为14像素 */
+}
+
+th {
+  font-weight: bold; /* 设置表头的字体为粗体 */
+}
+
+td {
+  text-align: center; /* 设置表格内容的对齐方式为居中 */
+}

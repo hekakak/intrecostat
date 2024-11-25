@@ -1,0 +1,84 @@
+---
+title: "My Presentation"
+format:
+  pptx:
+    reference-doc: kaka.pptx
+---
+
+## kaka
+
+-   Turn off alarm
+-   Get out of bed
+
+------------------------------------------------------------------------
+
+## AC milan
+
+-   Get in bed
+-   Count sheep
+-   Count sheep
+
+------------------------------------------------------------------------
+
+::: incremental
+-   Eat spaghetti
+-   Drink wine
+:::
+
+------------------------------------------------------------------------
+
+::: nonincremental
+-   Eat spaghetti
+-   Drink wine
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+:::
+
+------------------------------------------------------------------------
+
+Slide content
+
+::: notes
+Speaker notes go here.
+:::
+
+------------------------------------------------------------------------
+
+1.  ordered list
+2.  item 2
+    i)  sub-item 1
+        A.  sub-sub-item 1
+        
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+
+: Demonstration of pipe table syntax
+
+fruit| price
+-----|-----:
+apple|2.05
+pear|1.37
+orange|3.09
+
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {.striped .hover .light}
+
+

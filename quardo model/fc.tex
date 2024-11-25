@@ -1,0 +1,263 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Untitled},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Untitled}
+\author{}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+\hypertarget{ux7b2cux4e00ux7ae0-ux7eea-ux8bba}{%
+\section{第一章 绪 论}\label{ux7b2cux4e00ux7ae0-ux7eea-ux8bba}}
+
+\hypertarget{ux76f8ux5173ux6570ux7406ux7edfux8ba1ux77e5ux8bc6ux56deux987e}{%
+\subsection{相关数理统计知识回顾}\label{ux76f8ux5173ux6570ux7406ux7edfux8ba1ux77e5ux8bc6ux56deux987e}}
+
+\hypertarget{ux5e38ux89c1ux7edfux8ba1ux7684ux5206ux5e03ux53caux7279ux5f81}{%
+\subsubsection{常见统计的分布及特征}\label{ux5e38ux89c1ux7edfux8ba1ux7684ux5206ux5e03ux53caux7279ux5f81}}
+
+\hypertarget{ux79bbux6563ux5206ux5e03}{%
+\paragraph{离散分布}\label{ux79bbux6563ux5206ux5e03}}
+
+\begin{frame}{二项分布: \(X\sim B(n,p)\)}
+\protect\hypertarget{ux4e8cux9879ux5206ux5e03-xsim-bnp}{}
+\begin{itemize}
+\item
+  概率分布函数: \(p(X=k)=C^k_np^k(1-p)^{(n-k)}\)
+\item
+  期望与方差： \(\mathrm E(X)=np;\mathrm{Var}(X)=np(1-p)\)
+\item
+  证明:
+  \[\mathrm E(X)=\sum\limits^{n}_{k=0}kp(x=k)=\sum\limits^{n}_{k=0}k\frac{n!}{k!(n-k)!}p^k(1-p)^{(n-k)}\]
+  \[=np\sum\limits^{n}_{k=1}\frac{(n-1)!}{(k-1)!(n-k)!}p^{(k-1)}(1-p)^{(n-k)}=np \]
+  \[\mathrm {Var}(X)=\mathrm {E}(X^2)-\mathrm {E}^2(X) \]
+  \[\mathrm {E}(X^2)=\sum\limits^{n}_{k=0}k^2p(x=k)=\sum\limits^{n}_{k=2}k(k-1)p(x=k)+\mathrm E(X)\]
+  \[ =p^2\sum\limits^{n}_{k=2}\frac{n(n-1)(n-2)!}{(k-2)!(n-k)!}p^{(k-1)}(1-p)^{(n-k)}+np=n(n-1)p^2+np\]
+  \[\Rightarrow \mathrm{Var}(X)=np(1-p)\]
+\item
+  与正态分布关系:当\(n\rightarrow \infty， B(n,p)\overset{L}{\rightarrow}N(np,np(1-p))\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{超几何分布: \(X\sim H(n,N,M)\)}
+\protect\hypertarget{ux8d85ux51e0ux4f55ux5206ux5e03-xsim-hnnm}{}
+\begin{itemize}
+\tightlist
+\item
+  概率分布函数: p(X=k)=\frac{C^k_NC^{n-k}_{M}}{C^n_{N+M}}\\
+\item
+  期望与方差：
+  \mathrm E(X)=n\frac{N}{N+M};\mathrm{Var}(X)=n\frac{NM(N+M-n)}{(N+M)^2(N+M-1)}\\
+\item
+  与二项分布关系:当\(N,M\rightarrow \infty且\frac{N}{N+M}\rightarrow p， H(n,N,M)\overset{L}{\rightarrow}B(n,p)\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{均匀分布}
+\protect\hypertarget{ux5747ux5300ux5206ux5e03}{}
+\begin{itemize}
+\tightlist
+\item
+  秩统计量分布
+\item
+  单变量：\(X\sim U^1(n)\) 概率分布函数: \(p(X=k)=\frac{1}{n}\)
+  期望与方差：
+  \(\mathrm E(X)=\frac{n+1}{2};\mathrm{Var}(X)=\frac{n^2-1}{12}\)
+\item
+  双变量：(X,Y)\sim U\^{}2(n)
+  概率分布函数:\(p(X=i,Y=j)=\frac{1}{n(n-1)}\)
+  协方差与相关系数：\(\mathrm {Cov}(X,Y)=-\frac{n+1}{12};\rho(X,Y)=-\frac{1}{n-1}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{练习}
+\protect\hypertarget{ux7ec3ux4e60}{}
+\begin{itemize}
+\item
+  \(X\sim B(n=10,p=0.5)\)
+  ，（1）求\(p(X=5)\)和\(p(X=3)\)；（2）\(p(X\le3)\)和p\((X\le8)\)
+  ；（3）如何通过前两问的结果计算\(p(3\le X\le 8)\)。
+\item
+  \(X\sim U^1(10)\) ，求\(p(X\le 8)\)、\(p(2\le X\le9)\) 、
+  \(\mathrm E(X)\)和\(\mathrm{Var}(X)\) 。
+\item
+  \((X,Y)\sim U^2(10)\)
+  ，求\(p(X+Y\ge 15)\)、\(p(4\le X+Y\le 18)\)、\(\mathrm E(X+Y)\)和\(\mathrm{Var}(X+Y)\)。
+\item
+  \(X\sim H(n=5,N=10,M=4)\) ，求\(p(X=3)\)、\(p(X\le3)和p(X=5)\)。
+\item
+  在R语言中求二项分布和超几何分布的概率函数和累计概率函数分布是什么
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}

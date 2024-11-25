@@ -1,0 +1,27 @@
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  display: block;
+  position: fixed;
+  bottom: unset !important;
+  right: unset !important;
+  top: 10px;
+  left: 50 !important
+}
+
+.reveal .slides section[data-state="custom-title"] h1,h2,h3,h4{
+  color: rgb(0, 119, 255);  /* 修改标题字体为浅蓝色 */
+}
+
+.reveal .slides h1 {
+  font-family: '华文楷体', serif;
+  color: black;
+}
+
+.reveal .slides h2 {
+  font-family: '华文楷体', serif;
+  color: black;
+}
+
